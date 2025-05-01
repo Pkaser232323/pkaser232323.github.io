@@ -36,21 +36,9 @@
               <img src="./images/psss-Photoroom.png" class="layer tv" data-depth="0.3" alt="tv" style="width: 120%; margin-left: -15%;" />
 
               <div id="screen" class="layer" data-depth="0.23">
-                <div class="screen-title">
-                  <div class="text top">
-                    <p>A</p>
-                    <p>I</p>
-                    <p></p>
-                    <p>C</p>
-                    <p>U</p>
-                    <p>B</p>
-                    <p>E</p>
-                  </div>
-                  <div class="text lower"></div>
-                </div>
-           
-                <div class="ground"></div>
-                <div class="background"></div>
+                <video id="demo-video" controls playsinline style="width: 10%; height: 100%; object-fit: cover;">
+                
+                </video>
               </div>
             </div>
             
@@ -73,7 +61,7 @@
               </div>
             </div>
             <div id="btn-sign-up" class="layer" data-depth="0.2" style="margin-top: 120px;">
-              <a href="#" target="_blank" class="btn-sign-up layer">填寫問卷</a>
+              <a href="https://docs.google.com/forms/d/1XUipXiYXLHv7fbUETTY0rMVEVJyRzk98kWYO9yd8DS4/edit?ts=680b34ad" target="_blank" class="btn-sign-up layer">填寫問卷</a>
             </div>
           </div>
         </div>
@@ -268,7 +256,7 @@
                       <h2>Blender</h2>
                       <h4>3D建模與渲染</h4>
                       <p>#3D設計</p>
-                      <a href="#" target="_blank">查看功能細節</a>
+                      <a href="https://github.com/ahujasid/blender-mcp" target="_blank">查看功能細節</a>
                     </div>
                   </div>
                   <div class="card card-2">
@@ -283,7 +271,7 @@
                       <h2>Photoshop</h2>
                       <h4>影像處理</h4>
                       <p>#圖像編輯</p>
-                      <a href="#" target="_blank">查看功能細節</a>
+                      <a href="https://github.com/loonghao/photoshop-python-api-mcp-server" target="_blank">查看功能細節</a>
                     </div>
                   </div>
                   <div class="card card-3">
@@ -298,7 +286,7 @@
                       <h2>Figma</h2>
                       <h4>界面設計</h4>
                       <p>#UI/UX設計</p>
-                      <a href="#" target="_blank">查看功能細節</a>
+                      <a href="https://github.com/smithery-ai/mcp-figma" target="_blank">查看功能細節</a>
                     </div>
                   </div>
                 </div>
@@ -331,7 +319,7 @@
                     <img src="./images/rule-icon-1.png" alt="icon" />
                     <h4>需求輸入</h4>
                     <p class="date">步驟 1</p>
-                    <p>使用者說：「我要為飲料品牌設計一個鋁罐3D模型，並用Figma的圖片套用到罐身。」螢幕顯示一個簡易輸入框，使用者可點擊「開始設計」。</p>
+                    <p>使用者說：「我要為飲料品牌設計一個鋁罐3D模型，並用Photoshop的圖片套用到罐身。」螢幕顯示AICUBE對話框。</p>
                   </div>
                 </div>
                 <div class="rule-item rule-item-even">
@@ -341,7 +329,7 @@
                     <img src="./images/rule-icon-2.png" alt="icon" />
                     <h4>一鍵建模</h4>
                     <p class="date">步驟 2</p>
-                    <p>MCP調用Blender功能，自動生成一個鋁罐3D模型（基礎形狀）。螢幕展示Blender介面，並以動畫形式呈現模型生成過程（例如從圓柱體拉伸為鋁罐形狀）。</p>
+                    <p>AICUBE 透過MCP調用Blender功能，自動生成一個鋁罐3D模型（基礎形狀）。螢幕展示Blender介面。</p>
                   </div>
                 </div>
                 <div class="rule-item rule-item-odd">
@@ -351,7 +339,7 @@
                     <img src="./images/rule-icon-3.png" alt="icon" />
                     <h4>跨平台應用</h4>
                     <p class="date">步驟 3</p>
-                    <p>使用者說：「我已在Figma設計了罐身的品牌圖案。」螢幕顯示Figma介面，MCP自動提取Figma的圖片（PNG格式），並將其套用到Blender鋁罐的罐身（body部分）。動畫展示貼圖過程，並呈現最終效果。</p>
+                    <p>使用者說：「我已取得Photoshop設計的罐身的品牌圖案。」螢幕顯示Photoshop，AICUBE自動存檔並提取Photoshop的圖層（PNG格式），並將其套用到Blender鋁罐的罐身（body部分）。</p>
                   </div>
                 </div>
                 <div class="rule-item rule-item-even">
@@ -361,7 +349,7 @@
                     <img src="./images/rule-icon-4.png" alt="icon" />
                     <h4>結果展示</h4>
                     <p class="date">步驟 4</p>
-                    <p>螢幕顯示完成的鋁罐3D模型，罐身上有Figma圖案。「透過『AI CUBE』，我輕鬆實現了Figma與Blender的跨平台協作，節省了手動轉換的時間！」</p>
+                    <p>螢幕顯示完成的鋁罐3D模型，罐身上有Photoshop設計完的圖層。「透過『AI CUBE』，我輕鬆實現了Photoshop與Blender的跨平台協作，節省了手動轉換的時間！」</p>
                   </div>
                 </div>
               </div>
@@ -369,31 +357,19 @@
           </div>
         </div>
       </section>
-      <section id="awards">
-        <div class="container-line">
-          <div class="container-line-center">
-            <div class="line-item line-item-1"></div>
-            <div class="line-item line-item-2"></div>
-            <div class="line-item line-item-3"></div>
-            <div class="line-item line-item-4"></div>
+      <section id="awards" style="background: #1a1d27; padding: 80px 0;">
+        <div class="container">
+          <div class="video-wrapper" style="width: 100%; max-width: 1200px; margin: 0 auto; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); background: #000; position: relative; padding-top: 56.25%;">
+            <video id="demo-video" controls playsinline preload="metadata" poster="./images/video-poster.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;">
+              <source src="./videos/demo.mp4" type="video/mp4">
+              您的瀏覽器不支援影片播放
+            </video>
           </div>
-        </div>
-        <div class="devices-set">
-          <img src="./images/devices-tablet.png" alt="tablet" class="image-tablet" />
-          <img src="./images/devices-mobile.png" alt="mobile" class="image-mobile" />
-          <div class="devices-pc">
-            <div class="screen">
-              <img src="./images/screen-scroll.jpg" alt="screen" class="screen-scroll" />
-              <img src="./images/white-noise.gif" alt="noise" class="noise" />
-            </div>  
-            <img src="./images/devices-pc.png" alt="pc" class="image-pc" />
-          </div>
-          <img src="./images/devices-laptop.png" alt="laptop" class="image-laptop" />
-        </div>
-        <div class="title-border has-title-mask-fill">
-          <span>05</span>
         </div>
         <div class="container">
+          <div class="title-border has-title-mask-fill" style="margin-top: 60px;">
+            <span>05</span>
+          </div>
           <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
               <h2 class="title">校園列車</h2>
@@ -445,106 +421,36 @@
           </div>
         </div>
       </section>
-      <section id="question-answer">
+      <section id="question-answer" style="background: #1a1d27; padding: 80px 0;">
         <div class="title-border has-title-mask-fill">
           <span>06</span>
         </div>
         <div class="container">
           <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-              <h2 class="title">互動步驟</h2>
+              <h2 class="title">AI 運算架構</h2>
               <div class="separator">
-                <span><i class="fa-solid fa-comment-dots"></i></span>
+                <span><i class="fa-solid fa-microchip"></i></span>
               </div>
             </div>
             <div class="col-sm-12 col-md-12">
-              <div class="tabs">
-                <ul id="tabs-nav">
-                  <li>
-                    <a href="#tab1">
-                      <p>需求</p>
-                      <p>輸入</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#tab2">
-                      <p>一鍵</p>
-                      <p>建模</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#tab3">
-                      <p>跨平台</p>
-                      <p>應用</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#tab4">
-                      <p>結果</p>
-                      <p>展示</p>
-                    </a>
-                  </li>
-                </ul>
-                <div id="tabs-content">
-                  <div id="tab1" class="tab-content">
-                    <div class="accordion">
-                      <div class="accordion-item">
-                        <div class="accordion-btn" data-tab="tab1-1">
-                          <p>使用者說：「我要為飲料品牌設計一個鋁罐3D模型，並用Figma的圖片套用到罐身。」</p>
-                          <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="accordion-content" id="tab1-1">
-                          <div class="text">
-                            <p>螢幕顯示一個簡易輸入框，使用者可點擊「開始設計」。</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+              <div class="content" style="text-align: center; margin-bottom: 60px;">
+                <h3 style="color: #17c0e9; font-size: 28px; margin-bottom: 30px;">ASUS AIPC × AI CUBE</h3>
+                <p style="color: #fff; font-size: 18px; line-height: 1.8; max-width: 800px; margin: 0 auto;">目前能有效驅動 NPU 的應用仍有限，但我們預見其發展潛力，因此透過 AI CUBE 預先為 AIPC 建立起整合式的 AI 應用架構，當軟體生態成熟時，能無縫接軌、立即釋放 NPU 效能。</p>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="feature-box" style="background: #0e0531; border-radius: 20px; padding: 40px; height: 100%; text-align: center; box-shadow: 0 10px 30px rgba(14,5,49,0.3);">
+                    <img src="./images/icon2.png" alt="ASUS AIPC" style="width: 120px; height: 120px; margin-bottom: 30px;">
+                    <h4 style="color: #17c0e9; font-size: 24px; margin-bottom: 20px;">ASUS AIPC</h4>
+                    <p style="color: #fff; font-size: 16px; line-height: 1.6;">搭載 Intel® Core™ Ultra 處理器，具備 NPU 神經網路處理器，為 AI 應用提供強大的運算效能。</p>
                   </div>
-                  <div id="tab2" class="tab-content">
-                    <div class="accordion">
-                      <div class="accordion-item">
-                        <div class="accordion-btn" data-tab="tab2-1">
-                          <p>MCP調用Blender功能，自動生成一個鋁罐3D模型（基礎形狀）</p>
-                          <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="accordion-content" id="tab2-1">
-                          <div class="text">
-                            <p>螢幕展示Blender介面，並以動畫形式呈現模型生成過程（例如從圓柱體拉伸為鋁罐形狀）。</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="tab3" class="tab-content">
-                    <div class="accordion">
-                      <div class="accordion-item">
-                        <div class="accordion-btn" data-tab="tab3-1">
-                          <p>使用者說：「我已在Figma設計了罐身的品牌圖案。」</p>
-                          <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="accordion-content" id="tab3-1">
-                          <div class="text">
-                            <p>螢幕顯示Figma介面，MCP自動提取Figma的圖片（PNG格式），並將其套用到Blender鋁罐的罐身（body部分）。動畫展示貼圖過程，並呈現最終效果。</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="tab4" class="tab-content">
-                    <div class="accordion">
-                      <div class="accordion-item">
-                        <div class="accordion-btn" data-tab="tab4-1">
-                          <p>螢幕顯示完成的鋁罐3D模型，罐身上有Figma圖案</p>
-                          <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="accordion-content" id="tab4-1">
-                          <div class="text">
-                            <p>「透過『AI CUBE』，我輕鬆實現了Figma與Blender的跨平台協作，節省了手動轉換的時間！」</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-box" style="background: #0e0531; border-radius: 20px; padding: 40px; height: 100%; text-align: center; box-shadow: 0 10px 30px rgba(14,5,49,0.3);">
+                    <img src="./images/icon1.png" alt="AI CUBE" style="width: 120px; height: 120px; margin-bottom: 30px;">
+                    <h4 style="color: #17c0e9; font-size: 24px; margin-bottom: 20px;">AI CUBE</h4>
+                    <p style="color: #fff; font-size: 16px; line-height: 1.6;">整合式 AI 應用架構，優化設計工作流程，為未來 NPU 應用做好準備，實現效能最大化。</p>
                   </div>
                 </div>
               </div>
@@ -554,43 +460,39 @@
       </section>
       <section id="sponsor">
         <div class="container">
-          <div class="row reverse" style="align-items: center;">
-            <div class="col-sm-12 col-md-12 col-lg-11 d-flex align-items-center" style="display: flex; align-items: center;">
-              <div class="row justify-content-center w-100">
-                <div class="col-12 sponsor d-flex align-items-center justify-content-center" style="display: flex; align-items: center; justify-content: center;">
-                  <div class="item" style="min-height: 350px; height: auto; width: 100%; display: flex; align-items: center; justify-content: center;">
-                    <div class="image" style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                      <img src="./images/monsterlogo-removebg-preview.png" alt="Monster Energy" style="max-height: 260px; width: auto; max-width: 100%; margin-bottom: 1rem; display: block;" />
-                      <a class="link" href="https://www.monsterenergy.com/" target="_blank" style="display: flex; justify-content: center; width: 100%;">
-                        <span class="word" style="font-size: 2rem; letter-spacing: 0.1em; text-align: center; width: 100%; display: block;">
-                          <span class="char char-1">m</span>
-                          <span class="char char-2">o</span>
-                          <span class="char char-3">n</span>
-                          <span class="char char-4">s</span>
-                          <span class="char char-5">t</span>
-                          <span class="char char-6">e</span>
-                          <span class="char char-7">r</span>
-                          <span class="char char-8">e</span>
-                          <span class="char char-9">n</span>
-                          <span class="char char-10">e</span>
-                          <span class="char char-11">r</span>
-                          <span class="char char-12">g</span>
-                          <span class="char char-13">y</span>
-                          <span class="char char-14">.</span>
-                          <span class="char char-15">c</span>
-                          <span class="char char-16">o</span>
-                          <span class="char char-17">m</span>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
+          <div class="row" style="align-items: center;">
+            <div class="col-sm-12 col-md-12 col-lg-4">
+              <div class="item" style="min-height: 400px; width: 400px; display: flex; align-items: center; justify-content: center;">
+                <div class="image" style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                  <img src="./images/monsterlogo-removebg-preview.png" alt="Monster Energy" style="height: 300px; width: 300px; object-fit: contain; margin-bottom: 2rem; display: block;" />
+                  <a class="link" href="https://www.monsterenergy.com/" target="_blank" style="display: flex; justify-content: center; width: 100%;">
+                    <span class="word" style="font-size: 2rem; letter-spacing: 0.1em; text-align: center; width: 100%; display: block;">
+                      <span class="char char-1">m</span>
+                      <span class="char char-2">o</span>
+                      <span class="char char-3">n</span>
+                      <span class="char char-4">s</span>
+                      <span class="char char-5">t</span>
+                      <span class="char char-6">e</span>
+                      <span class="char char-7">r</span>
+                      <span class="char char-8">e</span>
+                      <span class="char char-9">n</span>
+                      <span class="char char-10">e</span>
+                      <span class="char char-11">r</span>
+                      <span class="char char-12">g</span>
+                      <span class="char char-13">y</span>
+                      <span class="char char-14">.</span>
+                      <span class="char char-15">c</span>
+                      <span class="char char-16">o</span>
+                      <span class="char char-17">m</span>
+                    </span>
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-1 d-flex align-items-center" style="display: flex; align-items: center; min-height: 350px; height: auto;">
-              <div class="title w-100" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
-                <h6>鑽石級贊助商</h6>
-                <h3 class="has-mask-fill">
+            <div class="col-sm-12 col-md-12 col-lg-8">
+              <div class="title" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; height: 100%; margin-left: 100px;">
+                <h6 style="white-space: nowrap; font-size: 5.5rem; margin-bottom: 0rem;">鑽石級贊助商</h6>
+                <h3 class="has-mask-fill" style="font-size: 8rem;">
                   <span>sponsor</span>
                 </h3>
               </div>
@@ -613,7 +515,7 @@
               </div>
             </div>
             <div class="col-sm-12 col-md-4 col-lg-3 align">
-              <a href="#" target="_blank" class="btn-sign-up">填寫問卷</a>
+              <a href="https://docs.google.com/forms/d/1XUipXiYXLHv7fbUETTY0rMVEVJyRzk98kWYO9yd8DS4/edit?ts=680b34ad" target="_blank" class="btn-sign-up">填寫問卷</a>
             </div>
           </div>
         </div>
@@ -623,25 +525,12 @@
           <div class="col-sm-12 col-md-12">
             <div class="content">
               <div class="copyright-text">
-                © 2022 All rights reserved. Design & Code with
-                <i class="fa-solid fa-heart"></i>
-                by
-                <a href="https://github.com/jedchang" target="_blank">Jed Chang</a>
+                © 2025 Imbastry
               </div>
               <ul class="social-icon">
                 <li>
-                  <a href="https://codepen.io/jedchang" target="_blank" class="btn-social">
-                    <i class="fa-brands fa-codepen"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/jedchang" target="_blank" class="btn-social">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://gitlab.com/jedchang" target="_blank" class="btn-social">
-                    <i class="fa-brands fa-gitlab"></i>
+                  <a href="https://www.instagram.com/aicube__/" target="_blank" class="btn-social">
+                    <i class="fa-brands fa-instagram"></i>
                   </a>
                 </li>
               </ul>
@@ -659,12 +548,31 @@
     <script src="js/vendors/jquery-1.8.2.min.js"></script>
     <script src="js/vendors/royal_preloader.min.js"></script>
     <script src="js/vendors/jquery.easing.min.js"></script>
-    <!-- <script src="js/vendors/jquery.scrollTo.js"></script> -->
-    <!-- <script src="js/vendors/waypoints.min.js"></script> -->
     <script src="js/vendors/gsap.min.js"></script>
     <script src="js/vendors/ScrollTrigger.min.js"></script>
     <script src="js/vendors/jquery.parallax.js"></script>
     <script src="js/vendors/typed.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const video = document.getElementById('demo-video');
+        
+        // 確保影片載入
+        video.load();
+        
+        // 檢查影片是否可以播放
+        video.addEventListener('canplay', function() {
+          console.log('Video can play');
+          video.play().catch(function(error) {
+            console.log("Video play failed", error);
+          });
+        });
+        
+        // 監聽錯誤
+        video.addEventListener('error', function(e) {
+          console.log('Video error:', e);
+        });
+      });
+    </script>
   </body>
 </html>
