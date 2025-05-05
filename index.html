@@ -32,7 +32,15 @@
         <div class="main-wrapper">
           <div class="main-image">
             <div id="tv">
-              <img src="./images/psss-Photoroom.png" class="layer tv" data-depth="0.3" alt="tv" style="width: 100%;" />
+              <div style="position: relative; cursor: pointer; z-index: 100;">
+                <!-- 主圖片 -->
+                <img src="./images/psss-Photoroom.png" class="layer tv" data-depth="0.3" alt="tv" style="width: 100%; transition: all 0.3s ease;" id="tv-image" />
+                
+                <!-- 覆蓋層 -->
+                <div id="tv-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(23, 192, 233, 0); display: flex; justify-content: center; align-items: center; opacity: 0; transition: all 0.3s ease; z-index: 101;">
+                  <span style="color: white; font-weight: bold; font-size: 24px; background: rgba(0,0,0,0.5); padding: 10px 20px; border-radius: 5px;">查看 ProArt</span>
+                </div>
+              </div>
             </div>
           </div>
           <div class="main-text">
@@ -53,7 +61,7 @@
               </div>
             </div>
             <div id="btn-sign-up" class="layer" data-depth="0.2" style="margin-top: 120px;">
-              <a href="https://docs.google.com/forms/d/1XUipXiYXLHv7fbUETTY0rMVEVJyRzk98kWYO9yd8DS4/edit?ts=680b34ad" target="_blank" class="btn-sign-up layer">填寫問卷</a>
+              <a href="https://www.asus.com/tw/proart/?utm_source=aicube&utm_medium=homepage_button&utm_campaign=proart_website" target="_blank" class="btn-sign-up layer" style="min-width: 240px; padding-left: 20px; padding-right: 20px;">了解 ProArt 創作者系列</a>
             </div>
           </div>
         </div>
@@ -429,6 +437,13 @@
               <div class="content" style="text-align: center; margin-bottom: 60px;">
                 <h3 style="color: #17c0e9; font-size: 28px; margin-bottom: 30px;">ASUS AIPC × AI CUBE</h3>
                 <p style="color: #fff; font-size: 18px; line-height: 1.8; max-width: 800px; margin: 0 auto;">目前能有效驅動 NPU 的應用仍有限，但我們預見其發展潛力，因此透過 AI CUBE 預先為 AIPC 建立起整合式的 AI 應用架構，當軟體生態成熟時，能無縫接軌、立即釋放 NPU 效能。</p>
+                <p style="color: #17c0e9; font-size: 18px; line-height: 1.8; max-width: 800px; margin: 20px auto 0;">ProArt 系列產品專為創作流程而設計，為設計師提供完整創作解決方案，從筆記型電腦、桌上型電腦到顯示器，全方位滿足專業創作需求。</p>
+                <div style="margin-top: 20px;">
+                  <a href="https://www.asus.com/tw/proart/?utm_source=aicube&utm_medium=aipc_section&utm_campaign=proart_website" target="_blank" style="display: inline-block; padding: 12px 25px; background: linear-gradient(135deg, #17c0e9, #0066cc); color: #fff; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 18px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(23, 192, 233, 0.4); position: relative; overflow: hidden;">
+                    <span style="position: relative; z-index: 2;">探索 ProArt 系列產品</span>
+                    <span style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); transition: 0.5s; z-index: 1;"></span>
+                  </a>
+                </div>
               </div>
               <div class="row">
                 <div class="col-md-6">
@@ -507,7 +522,7 @@
               </div>
             </div>
             <div class="col-sm-12 col-md-4 col-lg-3 align">
-              <a href="https://docs.google.com/forms/d/1XUipXiYXLHv7fbUETTY0rMVEVJyRzk98kWYO9yd8DS4/edit?ts=680b34ad" target="_blank" class="btn-sign-up">填寫問卷</a>
+              <a href="https://forms.gle/B78GTgbwPRYGk9WZA" target="_blank" class="btn-sign-up">填寫問卷</a>
             </div>
           </div>
         </div>
@@ -523,6 +538,11 @@
                 <li>
                   <a href="https://www.instagram.com/aicube__/" target="_blank" class="btn-social">
                     <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.asus.com/tw/proart/?utm_source=aicube&utm_medium=footer&utm_campaign=proart_website" target="_blank" class="btn-social">
+                    <i class="fa-solid fa-desktop"></i>
                   </a>
                 </li>
               </ul>
@@ -564,6 +584,65 @@
         video.addEventListener('error', function(e) {
           console.log('Video error:', e);
         });
+        
+        // ProArt 按鈕閃光效果
+        const proartBtn = document.querySelector('a[href*="proart/?utm_source=aicube&utm_medium=aipc_section"]');
+        if (proartBtn) {
+          proartBtn.addEventListener('mouseenter', function() {
+            const flashElement = this.querySelector('span:last-child');
+            flashElement.style.left = '100%';
+            setTimeout(() => {
+              flashElement.style.left = '-100%';
+            }, 500);
+          });
+        }
+        
+        // TV 圖片點擊處理 - 完全重構
+        const tvContainer = document.getElementById('tv');
+        const tvImage = document.getElementById('tv-image');
+        const tvOverlay = document.getElementById('tv-overlay');
+        
+        if (tvContainer && tvImage) {
+          console.log('找到TV元素，設置事件處理');
+          
+          // 懸停效果
+          tvContainer.addEventListener('mouseenter', function() {
+            console.log('滑鼠進入TV區域');
+            tvImage.style.transform = 'scale(1.05)';
+            tvImage.style.filter = 'brightness(0.8)';
+            if (tvOverlay) {
+              tvOverlay.style.opacity = '1';
+              tvOverlay.style.background = 'rgba(23, 192, 233, 0.3)';
+            }
+          });
+          
+          tvContainer.addEventListener('mouseleave', function() {
+            console.log('滑鼠離開TV區域');
+            tvImage.style.transform = 'scale(1)';
+            tvImage.style.filter = 'brightness(1)';
+            if (tvOverlay) {
+              tvOverlay.style.opacity = '0';
+              tvOverlay.style.background = 'rgba(23, 192, 233, 0)';
+            }
+          });
+          
+          // 點擊處理
+          tvContainer.addEventListener('click', function(e) {
+            console.log('TV元素被點擊，跳轉至ProArt官網');
+            window.open('https://www.asus.com/tw/proart/?utm_source=aicube&utm_medium=homepage&utm_campaign=proart_website', '_blank');
+          });
+          
+          // 點擊動畫
+          tvContainer.addEventListener('mousedown', function() {
+            tvImage.style.transform = 'scale(0.98)';
+          });
+          
+          tvContainer.addEventListener('mouseup', function() {
+            tvImage.style.transform = 'scale(1.05)';
+          });
+        } else {
+          console.error('找不到TV元素');
+        }
       });
     </script>
   </body>
